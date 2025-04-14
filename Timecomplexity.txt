@@ -42,6 +42,7 @@ void printElements(vector<int>& arr) {
 }
 
 // O(n²) – Quadratic Time
+//As above example, here for loop will run twice n * n = n²
 void printAllPairs(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
         for (int j = 0; j < arr.size(); j++) {
@@ -60,7 +61,9 @@ void printAllPairs(vector<int>& arr) {
 
 
 🧪 EXAMPLE: BINARY SEARCH (O(log n))
-
+// Trick:
+// Whenever you divide the problem size by 2 in each step (like n → n/2 → n/4 → ... → 1),
+// 👉 it’s a logarithmic time complexity → O(log n).
 int binarySearch(vector<int>& arr, int target) {
     int low = 0, high = arr.size() - 1;
     while (low <= high) {
