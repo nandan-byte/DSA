@@ -27,6 +27,7 @@ O(n!)      - Factorial Time       - All permutations (e.g., brute-force TSP)
 💡 COMMON EXAMPLES:
 
 // O(1) – Constant Time
+// when return arr[0] - return first index of an array(as array index start from 0 to n-1), only one step needed, it can access in constant time
 int getFirstElement(vector<int>& arr) {
     return arr[0];
 }
