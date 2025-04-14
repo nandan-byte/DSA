@@ -1,0 +1,90 @@
+==========================
+⏱️ TIME COMPLEXITY GUIDE 
+==========================
+
+Time complexity describes how the runtime of an algorithm increases with the size of the input. 
+It's a mathematical tool to analyze and compare the efficiency of algorithms.
+
+
+📚 BIG-O NOTATION CHEATSHEET:
+
+O(1)       - Constant Time        - Executes in the same time regardless of input size
+O(log n)   - Logarithmic Time     - Reduces problem size each step (e.g., Binary Search)
+O(n)       - Linear Time          - Increases linearly with input size (e.g., Iterating a vector)
+O(n log n) - Linearithmic Time    - Efficient sorting algorithms (e.g., Merge Sort, Quick Sort)
+O(n²)      - Quadratic Time       - Nested loops (e.g., Bubble Sort)
+O(2ⁿ)      - Exponential Time     - Recursive growth (e.g., Fibonacci)
+O(n!)      - Factorial Time       - All permutations (e.g., brute-force TSP)
+
+
+🔍 WHY TIME COMPLEXITY MATTERS:
+
+- Helps you choose the most efficient algorithm
+- Crucial for handling large datasets
+- Affects app performance and scalability
+
+
+💡 COMMON EXAMPLES:
+
+// O(1) – Constant Time
+int getFirstElement(vector<int>& arr) {
+    return arr[0];
+}
+
+// O(n) – Linear Time
+void printElements(vector<int>& arr) {
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << endl;
+    }
+}
+
+// O(n²) – Quadratic Time
+void printAllPairs(vector<int>& arr) {
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr.size(); j++) {
+            cout << arr[i] << ", " << arr[j] << endl;
+        }
+    }
+}
+
+
+🧠 HOW TO ANALYZE TIME COMPLEXITY:
+
+1. Count key operations inside loops or recursion
+2. Identify how many times loops/recursion executes
+3. Drop constants (e.g., O(2n) becomes O(n))
+4. Focus on worst-case scenario unless otherwise mentioned
+
+
+🧪 EXAMPLE: BINARY SEARCH (O(log n))
+
+int binarySearch(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}
+
+
+🚦 BEST, WORST, AND AVERAGE CASE:
+
+- Best Case: Minimum operations (e.g., target found immediately)
+- Average Case: Typical performance across random inputs
+- Worst Case: Max operations (commonly analyzed case)
+
+⚙️ OPTIMIZATION TIPS:
+
+- Use unordered_map or unordered_set for O(1) lookups
+- Avoid unnecessary nested loops
+- Use efficient algorithms like quicksort, binary search, sliding window
+- Learn dynamic programming for overlapping subproblems
+
+
+📌 PRO TIP:
+Always think in terms of growth: How will the code behave when n = 10⁶?
+
+Clean code is good — but **efficient code is gold**.
