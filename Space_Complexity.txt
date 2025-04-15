@@ -1,0 +1,120 @@
+📦 SPACE COMPLEXITY IN DATA STRUCTURES AND ALGORITHMS
+
+--------------------------------------------------------
+🧠 WHAT IS SPACE COMPLEXITY?
+--------------------------------------------------------
+
+Space Complexity is a measure of the total amount of memory or space that an algorithm or program takes in terms of input size.
+
+It includes:
+- Memory used by variables.
+- Memory used by data structures.
+- Memory used by function calls (stack space).
+- Memory used by recursion.
+
+In simple terms:
+"Space Complexity is about how much memory your algorithm needs to run efficiently."
+
+--------------------------------------------------------
+📌 WHY IS SPACE COMPLEXITY IMPORTANT?
+--------------------------------------------------------
+
+- Optimized Performance: Helps in designing memory-efficient algorithms.
+- Scalability: Memory usage becomes crucial when dealing with large data.
+- System Limitations: On systems with limited memory (e.g., embedded devices), space efficiency is critical.
+
+--------------------------------------------------------
+🧮 HOW TO CALCULATE SPACE COMPLEXITY?
+--------------------------------------------------------
+
+You usually express it using Big-O Notation, which gives the upper bound on the space used.
+
+✨ Example 1: Constant Space – O(1)
+
+public void printNumbers(int n) {
+    for (int i = 0; i < n; i++) {
+        System.out.println(i);
+    }
+}
+- No matter how big `n` is, we’re only using a few variables → O(1) space.
+
+
+✨ Example 2: Linear Space – O(n)
+
+public int[] createArray(int n) {
+    int[] arr = new int[n];
+    return arr;
+}
+- Array size depends on `n` → uses O(n) space.
+
+
+✨ Example 3: Recursive Function – O(n)
+
+public int factorial(int n) {
+    if (n == 1) return 1;
+    return n * factorial(n - 1);
+}
+- Each recursive call takes stack space.
+- For factorial(5), there will be 5 calls in the stack → O(n) space.
+
+--------------------------------------------------------
+🔄 AUXILIARY SPACE VS SPACE COMPLEXITY
+--------------------------------------------------------
+
+- Auxiliary Space: Extra space or temporary space used by the algorithm excluding input data.
+- Space Complexity: Includes input space + auxiliary space.
+
+Example:
+
+int sum(int[] arr) {
+    int total = 0;
+    for (int i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+
+- Space for arr[] is input space.
+- Space for total and i is auxiliary space.
+- Space complexity = O(n) (input) + O(1) (auxiliary) = O(n)
+
+--------------------------------------------------------
+🆚 TIME COMPLEXITY VS SPACE COMPLEXITY
+--------------------------------------------------------
+
+Feature            | Time Complexity   | Space Complexity
+--------------------------------------------------------
+Measures           | Execution time    | Memory used
+Affects            | Speed             | Memory efficiency
+Optimization Needed| Slow algorithms   | High memory usage
+
+--------------------------------------------------------
+🚀 TIPS TO OPTIMIZE SPACE COMPLEXITY
+--------------------------------------------------------
+
+- Use pointers or references instead of copying data.
+- Reuse variables and data structures when possible.
+- Use iterative solutions instead of recursive to save stack space.
+- Choose the right data structure for the task (e.g., ArrayList vs LinkedList).
+
+--------------------------------------------------------
+🧪 COMMON SPACE COMPLEXITIES
+--------------------------------------------------------
+
+Complexity | Meaning
+--------------------------
+O(1)       | Constant space
+O(log n)   | Logarithmic space (e.g., binary search)
+O(n)       | Linear space
+O(n^2)     | Quadratic space (e.g., 2D arrays)
+O(n!)      | Factorial space (very rare)
+
+--------------------------------------------------------
+✅ SUMMARY
+--------------------------------------------------------
+
+- Space Complexity is key for designing memory-efficient code.
+- Use Big-O notation to express it.
+- Learn to distinguish between input space and auxiliary space.
+- Optimize when memory is a constraint.
+
