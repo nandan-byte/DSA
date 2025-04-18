@@ -27,22 +27,24 @@ O(n!)      - Factorial Time       - All permutations (e.g., brute-force TSP)
 💡 COMMON EXAMPLES:
 
 // O(1) – Constant Time
-// when return arr[0] - return first index of an array(as array index start from 0 to n-1), only one step needed, 
-// it can access in constant time.
+
 int getFirstElement(vector<int>& arr) {
     return arr[0];
 }
+// when return arr[0] - return first index of an array(as array index start from 0 to n-1), only one step needed, 
+// it can access in constant time.
 
 // O(n) – Linear Time
-//For accessing all array elements using for loop - for loop runs for array elements, means if array has n elements for loop runs for n times, time complexity will be n i.e O(n) (Big O of n).
+
 void printElements(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
         cout << arr[i] << endl;
     }
 }
+//For accessing all array elements using for loop - for loop runs for array elements, means if array has n elements //for loop runs for n times, time complexity will be n i.e O(n) (Big O of n).
 
 // O(n²) – Quadratic Time
-//As above example, here for loop will run twice n * n = n²
+
 void printAllPairs(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
         for (int j = 0; j < arr.size(); j++) {
@@ -50,6 +52,7 @@ void printAllPairs(vector<int>& arr) {
         }
     }
 }
+//As above example, here for loop will run twice n * n = n²
 
 
 🧠 HOW TO ANALYZE TIME COMPLEXITY:
