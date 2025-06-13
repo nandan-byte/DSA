@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void printpattern(int n)
+void printpattern3(int n)
 {
   for(int i=1;i<=n;i++){
     for(int j=1;j<=i;j++){
@@ -13,6 +13,6 @@ int main(){
   int rows;
   cout<<"Enter the number of rows: ";
   cin>>rows;
-  printpattern(rows);
+  printpattern3(rows);
   return 0;
 }
