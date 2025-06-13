@@ -12,7 +12,6 @@ int main(){
   int rows;
   cout<<"Enter the number of rows: ";
   cin>>rows;
-
   printpattern4(rows);
   return 0;
 }
