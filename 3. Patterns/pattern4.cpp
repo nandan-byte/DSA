@@ -10,7 +10,7 @@ void printpattern4(int n){
 }
 int main(){
   int rows;
-  cout<<"Enter the number of rows";
+  cout<<"Enter the number of rows: ";
   cin>>rows;
 
   printpattern4(rows);
