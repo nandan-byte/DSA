@@ -21,3 +21,13 @@ int main(){
   printPattern7(rows);
   return 0;
 }
+
+/*Logic to Solve the pyramind:
+  space   star  space
+    4       1     4                _ _ _ _ * _ _ _ _
+    3       3     3                _ _ _ * * * _ _ _          
+    2       5     2                _ _ * * * * * _ _   
+    1       7     1                _ * * * * * * * _          
+    0       9     0                * * * * * * * * *            
+n-i-1     2*i+1   n-i-1  
+*/
