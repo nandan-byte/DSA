@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int maxelement3(vector<int>& nums){
+int maxelement2(vector<int>& nums){
 int n=nums.size();
 int max1=INT_MIN;
 int max2=INT_MIN;
@@ -24,7 +24,7 @@ int main(){
   for(int i=0;i<n;i++){
     cin>>arr[i];
   }
-  int max2 = maxelement3(arr);
+  int max2 = maxelement2(arr);
   cout<<"Your 2nd maximum element is: "<<max2;
   return 0;
 }
