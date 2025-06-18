@@ -40,4 +40,18 @@ int main(){
   }
 }
 //Time Complexity = O(N)
+//Example: [1,2,3,4,5,6,7]; n=7; k=3;
+//at first for loop runs k times = 3 times;
+//at second for loop runs n-k times = 4 times;
+//at third for loop runs k itmes = 3 times;
+//k (copy temp)  
+//+ (n - k) (shift elements)  
+//+ k (copy back to front)  
+//= k + (n - k) + k
+//= k + n - k + k  
+//= n + k
+//Technically yes, n + k is the actual number of operations.
+//But in Big-O Notation, we ignore constants and lower-order terms.
+//And Big-O(2n) is still O(n)
+
 //Space Complexity = O(k)
