@@ -55,3 +55,11 @@ int main(){
 //And Big-O(2n) is still O(n)
 
 //Space Complexity = O(k)
+//To make space Complexity O(1)
+//We can use STL reverse() function
+// Reverse entire array
+//                           reverse(nums.begin(), nums.end());
+// Reverse first k elements
+//                           reverse(nums.begin(), nums.begin() + k);
+// Reverse remaining n-k elements
+//                           reverse(nums.begin() + k, nums.end());
