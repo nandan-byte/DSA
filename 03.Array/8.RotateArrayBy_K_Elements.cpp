@@ -39,3 +39,5 @@ int main(){
     cout<<arr[i]<<" ";
   }
 }
+//Time Complexity = O(N)
+//Space Complexity = O(k)
