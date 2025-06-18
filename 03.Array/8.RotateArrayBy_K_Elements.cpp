@@ -36,6 +36,6 @@ int main(){
   sol.rotateElements(arr, k);
   cout<<"Rotated by "<< k <<" elements are: ";
     for(int i=0;i<n;i++){
-    cout<<arr[i];
+    cout<<arr[i]<<" ";
   }
 }
